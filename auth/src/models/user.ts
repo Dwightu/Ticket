@@ -37,6 +37,8 @@ userSchema.statics.build=(attrs:UserAttrs)=>{
     return new User(attrs);
 }
 
+// <> as being types provided to a function as arguments
+// Allow us to custonmise the types being used inside of a function, a class or an interface
 const User = mongoose.model<UserDoc, UserModel>('User', userSchema)
 
 
