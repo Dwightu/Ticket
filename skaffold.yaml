@@ -1,0 +1,22 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+# List all the config files we want to load it to our cluster
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+build:
+  local:
+    push: false
+    # Whenever we build an image, do not try to push it off to Docker Hub
+  artifacts:
+    # All the things to build
+    - image: dwightu/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+      # Tell Skaffold when to handle changes
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
