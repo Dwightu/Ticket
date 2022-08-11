@@ -34,6 +34,10 @@ router.post(
     await user.save();
 
     //Generate JWT
+    //How to create a secret in kubectl?
+    //kubectl create secret generic jwt-secret --from-literal=jwt=asdf
+    //kubectl get secret
+    //imperative approach
     const userJwt = jwt.sign({
       id: user.id,
       email: user.email
