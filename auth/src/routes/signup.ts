@@ -1,10 +1,10 @@
 import express, { Request, Response } from "express";
 import { body, validationResult } from "express-validator";
-import { RequestValidationError } from "../errors/request-validation-error";
+import { RequestValidationError } from '@dehui/common';
 import { User } from '../models/user';
-import { BadRequestError } from "../errors/bad-request-error";
+import { BadRequestError } from '@dehui/common';
 import jwt from "jsonwebtoken";
-import { validateRequest } from "../middlewares/validate-request";
+import { validateRequest } from '@dehui/common';
 
 const router = express.Router();
 

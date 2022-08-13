@@ -4,8 +4,8 @@ import { Request, Response } from 'express';
 import { User } from '../models/user';
 import { Password } from '../services/password';
 import jwt from 'jsonwebtoken'
-import { validateRequest } from '../middlewares/validate-request';
-import { BadRequestError } from '../errors/bad-request-error';
+import { validateRequest } from '@dehui/common';
+import { BadRequestError } from '@dehui/common';
 
 const router = express.Router();
 
