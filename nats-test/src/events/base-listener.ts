@@ -1,16 +1,23 @@
 import nats, { Message, Stan } from 'node-nats-streaming';
 import { randomBytes } from 'crypto';
+import { Subjects } from "./subjects";
+
+
+interface Event{
+    subject:Subjects;
+    data:any;
+}
 
 
 
-
-export abstract class Listener {
+// Whenever we try to extend it, we're going to have to provide some
+// custom type to this
+export abstract class Listener<T extends Event> {
     abstract queueGroupName:string;
-    abstract subject:string;
-    abstract onMessage(data:any,msg:Message):void;
+    abstract subject:T['subject'];
+    abstract onMessage(data:T['data'],msg:Message):void;
     private client:Stan;
     protected ackWait=5*1000;
-  
   
     constructor(client:Stan){
       this.client=client;
