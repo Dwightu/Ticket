@@ -8,8 +8,6 @@ interface Event{
     data:any;
 }
 
-
-
 // Whenever we try to extend it, we're going to have to provide some
 // custom type to this
 export abstract class Listener<T extends Event> {
