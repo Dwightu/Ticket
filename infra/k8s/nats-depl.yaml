@@ -21,10 +21,15 @@ spec:
               '4222',
               '-m',
               '8222',
+              # How Often a streaming server is going to 
+              # make a heartbeat request to each of its clients
               '-hbi',
               '5s',
+              # How long each client has to respond
               '-hbt',
               '5s',
+              # Number of times that each client can fail before 
+              # that streaming server is going to fail
               '-hbf',
               '2',
               '-SD',
