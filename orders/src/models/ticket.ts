@@ -46,6 +46,7 @@ ticketSchema.methods.isReserved = async function () {
   const existingOrder = await Order.findOne({
     ticket: this,
     status: {
+      // Mongoose operator
       $in: [
         OrderStatus.Created,
         OrderStatus.AwaitingPayment,
