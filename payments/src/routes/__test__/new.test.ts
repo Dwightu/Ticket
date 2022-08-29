@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import request from "supertest";
-import { OrderStatus } from "@cygnetops/common-v2";
+import { OrderStatus } from "@dehui/common";
 import { app } from "../../app";
 import { Order } from "../../models/order";
 import { stripe } from "../../stripe";

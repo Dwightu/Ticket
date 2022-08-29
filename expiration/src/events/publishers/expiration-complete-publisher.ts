@@ -2,7 +2,7 @@ import {
   Subjects,
   Publisher,
   ExpirationCompleteEvent,
-} from "@cygnetops/common-v2";
+} from "@dehui/common";
 
 export class ExpirationCompletePublisher extends Publisher<ExpirationCompleteEvent> {
   subject: Subjects.ExpirationComplete = Subjects.ExpirationComplete;

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { updateIfCurrentPlugin } from "mongoose-update-if-current";
-import { OrderStatus } from "@cygnetops/common-v2";
+import { OrderStatus } from "@dehui/common";
 
 interface OrderAttrs {
   id: string;

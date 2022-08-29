@@ -1,10 +1,9 @@
-import express from 'express';
-import { currentUser } from '@dehui/common';
-import { requireAuth } from '@dehui/common';
+import express from "express";
+import { currentUser } from "@dehui/common";
 
 const router = express.Router();
 
-router.get('/api/users/currentuser',currentUser,(req, res) => {
+router.get("/api/users/currentuser", currentUser, (req, res) => {
   res.send({ currentUser: req.currentUser || null });
 });
 

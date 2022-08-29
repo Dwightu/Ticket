@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: payments
-          image: cygnetops/payments
+          image: dwightu/payments
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -35,7 +35,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: stripe-secret
-                  key: STRIPE_KEY
+                  key: STRIPT_KEY
 ---
 apiVersion: v1
 kind: Service

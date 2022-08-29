@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { Message } from "node-nats-streaming";
-import { OrderCreatedEvent, OrderStatus } from "@cygnetops/common-v2";
+import { OrderCreatedEvent, OrderStatus } from "@dehui/common";
 import { natsWrapper } from "../../../nats-wrapper";
 import { OrderCreatedListener } from "../order-created-listener";
 import { Order } from "../../../models/order";

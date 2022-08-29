@@ -1,4 +1,4 @@
-import { Subjects, Publisher, PaymentCreatedEvent } from "@cygnetops/common-v2";
+import { Subjects, Publisher, PaymentCreatedEvent } from "@dehui/common";
 
 export class PaymentCreatedPublisher extends Publisher<PaymentCreatedEvent> {
   subject: Subjects.PaymentCreated = Subjects.PaymentCreated;

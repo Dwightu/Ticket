@@ -3,7 +3,7 @@ import {
   Listener,
   PaymentCreatedEvent,
   OrderStatus,
-} from '@cygnetops/common-v2';
+} from '@dehui/common';
 import { Message } from 'node-nats-streaming';
 import { queueGroupName } from './queue-group-name';
 import { Order } from '../../models/order';

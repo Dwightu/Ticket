@@ -22,7 +22,6 @@ const Signin = () => {
   };
 
   return (
-    <div className="container">
     <form onSubmit={onSubmit}>
       <h1>Sign In</h1>
       <div className="form-group">
@@ -45,7 +44,6 @@ const Signin = () => {
       {errors}
       <button className="btn btn-primary">Sign In</button>
     </form>
-    </div>
   );
 };
 
