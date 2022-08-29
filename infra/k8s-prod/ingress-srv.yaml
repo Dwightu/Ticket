@@ -10,7 +10,6 @@ spec:
     - host: www.sellyourbook.xyz
       http:
         paths:
-        # Follow the order
           - path: /api/payments/?(.*)
             pathType: Prefix
             backend:
@@ -46,15 +45,13 @@ spec:
                 name: client-srv
                 port:
                   number: 3000
-
-           
 ---
 apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
-    service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.sellyourbook.xyz'
+    service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
+    service.beta.kubernetes.io/do-loadbalancer-hostname: "www.sellyourbook.xyz"
   labels:
     helm.sh/chart: ingress-nginx-2.0.3
     app.kubernetes.io/name: ingress-nginx
