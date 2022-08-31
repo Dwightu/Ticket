@@ -7,6 +7,9 @@ A `microservice` application based on `event-driven` architecture.
 - Build responsive website pages that adjust to different screen size with `Next`, `TypeScript` and `React`
 - Build a `CI/CD` workflow by using `GitHub Actions` and automate unit tests by using `Jest` testing framework.
 
+## CI/CD workflow
+<img width="400px" src="https://github.com/Dwightu/Ticket/blob/master/resources/ci_cd.png"></img>
+
 ## Usage
 1. git clone 
 2. cd Ticket
