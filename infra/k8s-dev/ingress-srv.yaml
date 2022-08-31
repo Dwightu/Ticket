@@ -10,7 +10,6 @@ spec:
     - host: ticketing.dev
       http:
         paths:
-        # Follow the order
           - path: /api/payments/?(.*)
             pathType: Prefix
             backend:
